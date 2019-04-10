@@ -1,31 +1,17 @@
 <?php
 $link=mysqli_connect("localhost","root","");
-mysqli_select_db($link,"iugale");
-if(isset($_POST{"submit"}))
+mysqli_select_db($link,"Learning");
+if(isset($_POST{"submit1"}))
 	{
-		$name=$_POST["name"];
+		
 		$email=$_POST["email"];
-		$phno=$_POST["phno"];
-		$services=$_POST["services"];
-		$result=mysqli_query($link,"insert into home values('$name','$email','$phno','$services')");
-		if(strcmp($services, 'Marketing') == 0)
-		{
-			echo"<script>
-			window.location.href='marketing.html';
-			</script>";
-		}
-		else if(strcmp($services, 'Consulting') == 0)
-		{
-			echo"<script>
-			window.location.href='consulting.html';
-			</script>";
-		}
-		else if(strcmp($services, 'Service') == 0)
-		{
-			echo"<script>
-			window.location.href='services.html';
-			</script>";
-		}
+		
+		$result=mysqli_query($link,"insert into sub_home values('$email')");
+		echo "<script>
+         window.location.href='index.html';
+		 alert('Thank you');
+        </script>";
+		
 	}
 else{
 				echo "<script>
