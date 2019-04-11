@@ -1,0 +1,13 @@
+Server: local host
+User name: root
+password: 
+
+-----Contact page-----
+Database name: Learning
+table name: contact
+Attributes: board,subject,name,email,phno,message.
+
+-----Index page for subcribe button----
+Database name: Learning
+table name: sub_home
+Attributes: email.
